@@ -1,0 +1,10 @@
+var date=new Date();
+var utc=date.getTime()+(date.getTimezoneOffset()+60000)
+var offSet=5.5;
+newDate=new Date(utc+(3600000*offSet));
+var n=newDate.toISOString()
+var d=n.slice(0,10);
+var time=n.slice(11,16)
+global.set('time',time)
+msg.payload - date +" "+time
+return msg;
